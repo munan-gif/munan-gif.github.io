@@ -3,17 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>무난한 일상 | munan</title>
+    <title>Wedding Invitation</title>
     <style>
-        :root {
-            --gap: 1.25rem;
-            --speed: 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            --closed: 5rem;
-            --open: 30rem;
-            --accent: #667eea;
-            --accent-hover: #764ba2;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -21,820 +12,559 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
-            line-height: 1.6;
+            font-family: 'Nanum Myeongjo', serif;
+            background-color: #fff8e1;
             color: #333;
-            background: #f8f9fa;
-        }
-
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        nav {
-            background: white;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #764ba2;
+            line-height: 1.6;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 2rem;
+            background: #fffef5;
         }
 
         section {
-            background: white;
-            margin: 2rem 0;
-            padding: 3rem 2rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 40px 20px;
         }
 
-        section h2 {
-            color: #667eea;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 3px solid #667eea;
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #ff6b6b;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 0px #ffe08a;
         }
 
         /* 소개 섹션 */
-        .intro-content {
-            display: flex;
-            gap: 3rem;
-            align-items: center;
-            flex-wrap: wrap;
+        .intro {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, #ffeb3b 0%, #fff8e1 50%, #ffcdd2 100%);
+            border-bottom: 4px solid #ff6b6b;
         }
 
-        .profile-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
-            font-weight: bold;
-            flex-shrink: 0;
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        .intro h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #ff6b6b;
+            font-weight: 700;
+            text-shadow: 3px 3px 0px #fff59d;
         }
 
-        .intro-text {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .intro-text h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .intro-text p {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.8;
-        }
-
-        /* 기술 스택 섹션 */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-category h3 {
-            color: #333;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-tag {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 0.5rem 1rem;
+        .intro .date {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #e65100;
+            font-weight: 600;
+            background: #fff;
+            display: inline-block;
+            padding: 10px 20px;
             border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
+            border: 3px solid #ff6b6b;
         }
 
-        /* 프로젝트 섹션 - 슬라이더 스타일 */
-        #projects {
-            background: #07090d;
-            color: #c5c7ce;
-            padding: 3rem 0;
+        .intro .names {
+            font-size: 22px;
+            margin: 30px 0;
+            line-height: 2;
+            color: #d32f2f;
+            font-weight: 700;
         }
 
-        #projects h2 {
-            color: #fff;
-            border-bottom: 3px solid var(--accent);
-            max-width: 1400px;
-            margin: 0 auto 2rem;
-            padding: 0 2rem 0.5rem;
+        .intro .message {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #424242;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            border: 3px dashed #ff9800;
         }
 
-        .project-head {
-            max-width: 1400px;
-            margin: auto;
-            padding: 20px 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            gap: 2rem;
-        }
-
-        .project-head h3 {
-            font: 400 1.2rem/1.2 Inter, sans-serif;
-            color: #c5c7ce;
-        }
-
-        .controls {
-            display: flex;
-            flex-direction: row;
-            gap: 0.5rem;
-        }
-
-        .nav-btn {
-            width: 2.5rem;
-            height: 2.5rem;
-            border: none;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.12);
-            color: #fff;
-            font-size: 1.5rem;
+        /* 메인 이미지 자리 */
+        .main-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #ffd54f 0%, #ffab91 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
-            transition: 0.3s;
+            color: #ff6b6b;
+            font-size: 18px;
+            font-weight: 700;
+            border: 5px solid #ff6b6b;
         }
 
-        .nav-btn:hover {
-            background: var(--accent);
-        }
-
-        .nav-btn:disabled {
-            opacity: 0.3;
-            cursor: default;
-        }
-
-        .slider {
-            max-width: 1400px;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        .track {
-            display: flex;
-            gap: var(--gap);
-            align-items: flex-start;
-            justify-content: center;
-            scroll-behavior: smooth;
-            scroll-snap-type: x mandatory;
-            padding-bottom: 40px;
-        }
-
-        .track::-webkit-scrollbar {
-            display: none;
-        }
-
-        .project-card {
-            position: relative;
-            flex: 0 0 var(--closed);
-            height: 26rem;
-            border-radius: 1rem;
-            overflow: hidden;
-            cursor: pointer;
-            transition: flex-basis var(--speed), transform var(--speed);
-        }
-
-        .project-card[active] {
-            flex-basis: var(--open);
-            transform: translateY(-6px);
-            box-shadow: 0 18px 55px rgba(0, 0, 0, 0.45);
-        }
-
-        .project-card__bg {
-            position: absolute;
-            inset: 0;
+        .main-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: brightness(0.75) saturate(75%);
-            transition: filter 0.3s, transform var(--speed);
         }
 
-        .project-card:hover .project-card__bg {
-            filter: brightness(0.9) saturate(100%);
-            transform: scale(1.06);
+        /* 소개 영상 섹션 */
+        .video-section {
+            background: linear-gradient(to bottom, #fff59d 0%, #ffccbc 100%);
+            border-top: 4px solid #ff9800;
+            border-bottom: 4px solid #ff9800;
         }
 
-        .project-card__content {
-            position: absolute;
-            inset: 0;
+        .video-container {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #ffeb3b 0%, #ff9800 100%);
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
-            gap: 0.7rem;
-            padding: 0;
-            background: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.85) 100%);
+            justify-content: center;
+            color: #d32f2f;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 15px;
+            border: 4px solid #ff6b6b;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            border: 4px solid #ff6b6b;
+        }
+
+        /* 오시는 길 섹션 */
+        .location {
+            background: #fffef5;
+        }
+
+        .location .venue-info {
+            text-align: center;
+            margin-bottom: 30px;
+            background: #fff9c4;
+            padding: 20px;
+            border-radius: 15px;
+            border: 3px solid #ffa726;
+        }
+
+        .location .venue-name {
+            font-size: 22px;
+            color: #ff6b6b;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .location .venue-address {
+            font-size: 15px;
+            color: #424242;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #ffeb3b 0%, #ff9800 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d32f2f;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 4px solid #ff6b6b;
+        }
+
+        .map-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .map-btn {
+            flex: 1;
+            padding: 12px;
+            border: 3px solid #ff6b6b;
+            background: #fff59d;
+            color: #d32f2f;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 3px 3px 0px #ff9800;
+        }
+
+        .map-btn:hover {
+            background: #ff6b6b;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 5px 5px 0px #d32f2f;
+        }
+
+        .map-btn:active {
+            transform: translateY(0px);
+            box-shadow: 2px 2px 0px #d32f2f;
+        }
+
+        /* 사진 갤러리 섹션 - 카드 슬라이더 */
+        .gallery {
+            background: linear-gradient(to bottom, #ffccbc 0%, #fff9c4 100%);
+            border-top: 4px solid #ff6b6b;
+            border-bottom: 4px solid #ff6b6b;
+            min-height: 600px;
+            position: relative;
+        }
+
+        .slider {
+            position: relative;
+            width: 300px;
+            height: 450px;
+            perspective: 1000px;
+            margin: 50px auto;
+            cursor: pointer;
+        }
+
+        .slider .item {
+            position: absolute;
+            width: 300px;
+            aspect-ratio: 2/3;
+            background: #fff;
+            border-radius: 10px;
+            border: 4px solid #ff6b6b;
+            box-shadow: 4px 4px 0px #ff9800;
+            object-fit: cover;
+        }
+
+        .slider .item:nth-child(5) {
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .slider .item:nth-child(4) {
+            left: 20px;
+            top: -20px;
             z-index: 2;
         }
-
-        .project-card__title {
-            color: #fff;
-            font-weight: 700;
-            font-size: 1.35rem;
-            writing-mode: vertical-rl;
-            transform: rotate(180deg);
+        .slider .item:nth-child(3) {
+            left: 40px;
+            top: -40px;
+            z-index: 3;
+        }
+        .slider .item:nth-child(2) {
+            left: 60px;
+            top: -60px;
+            z-index: 4;
+        }
+        .slider .item:nth-child(1) {
+            left: 80px;
+            top: -80px;
+            z-index: 5;
         }
 
-        .project-card__thumb,
-        .project-card__desc,
-        .project-card__btn {
-            display: none;
-        }
-
-        .project-card[active] .project-card__content {
-            flex-direction: row;
-            align-items: center;
-            padding: 1.2rem 2rem;
-            gap: 1.1rem;
-        }
-
-        .project-card[active] .project-card__title {
-            writing-mode: horizontal-tb;
-            transform: none;
-            font-size: 2.4rem;
-        }
-
-        .project-card[active] .project-card__thumb,
-        .project-card[active] .project-card__desc,
-        .project-card[active] .project-card__btn {
-            display: block;
-        }
-
-        .project-card__thumb {
-            width: 133px;
-            height: 269px;
-            border-radius: 0.45rem;
-            object-fit: cover;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-        }
-
-        .project-card__desc {
-            color: #ddd;
-            font-size: 1rem;
-            line-height: 1.4;
-            max-width: 16rem;
-        }
-
-        .project-card__btn {
-            padding: 0.55rem 1.3rem;
-            border: none;
-            border-radius: 9999px;
-            background: var(--accent);
-            color: #fff;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        .project-card__btn:hover {
-            background: var(--accent-hover);
-        }
-
-        .dots {
-            display: flex;
-            gap: 0.5rem;
-            justify-content: center;
-            padding: 20px 0;
-        }
-
-        .dot {
-            width: 13px;
-            height: 13px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.35);
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .dot.active {
-            background: var(--accent);
-            transform: scale(1.2);
-        }
-
-        /* 연락처 섹션 */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1.5rem;
-            background: #f8f9fa;
-            border-radius: 8px;
-            transition: background 0.3s;
-        }
-
-        .contact-item:hover {
-            background: #e9ecef;
-        }
-
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-
-        .contact-info h3 {
-            color: #333;
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .contact-info a {
-            color: #667eea;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .contact-info a:hover {
-            color: #764ba2;
-        }
-
-        footer {
-            background: #333;
-            color: white;
+        .gallery-notice {
             text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
+            font-size: 14px;
+            color: #d32f2f;
+            font-weight: 600;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            border: 2px dashed #ff6b6b;
         }
 
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
+        /* 축의금 섹션 */
+        .account {
+            background: #fffef5;
+        }
+        
+        .account .account-info {
+            background: linear-gradient(135deg, #fff9c4 0%, #ffccbc 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            border: 3px solid #ff9800;
+            box-shadow: 4px 4px 0px #ff6b6b;
+        }
 
-            .intro-content {
-                flex-direction: column;
-                text-align: center;
-            }
+        .account .account-title {
+            font-size: 18px;
+            color: #ff6b6b;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
 
-            nav ul {
-                gap: 1rem;
-            }
+        .account .account-detail {
+            font-size: 14px;
+            color: #424242;
+            line-height: 1.8;
+            font-weight: 600;
+        }
 
-            section {
-                padding: 2rem 1rem;
-            }
+        .copy-btn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: 3px solid #ff6b6b;
+            background: #fff59d;
+            color: #d32f2f;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 3px 3px 0px #ff9800;
+            transition: all 0.2s;
+        }
 
-            :root {
-                --closed: 100%;
-                --open: 100%;
-                --gap: 0.8rem;
-            }
+        .copy-btn:active {
+            background: #ffeb3b;
+            transform: translateY(2px);
+            box-shadow: 1px 1px 0px #ff9800;
+        }
 
-            .project-head {
-                padding: 30px 15px 20px;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
-            }
+        /* 식사 안내 섹션 */
+        .meal {
+            background: linear-gradient(to bottom, #ffeb3b 0%, #ffcdd2 100%);
+            text-align: center;
+            border-top: 4px solid #ff6b6b;
+        }
 
-            .slider {
-                padding: 0 15px;
-            }
+        .meal-info {
+            font-size: 16px;
+            color: #424242;
+            line-height: 2;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            border: 3px dashed #ff9800;
+        }
 
-            .track {
-                flex-direction: column;
-                scroll-snap-type: y mandatory;
-                gap: 0.8rem;
-                padding-bottom: 20px;
-            }
+        .meal-notice {
+            margin-top: 20px;
+            padding: 20px;
+            background: #fff59d;
+            border-radius: 15px;
+            font-size: 14px;
+            color: #d32f2f;
+            font-weight: 600;
+            border: 3px solid #ff6b6b;
+            box-shadow: 4px 4px 0px #ff9800;
+        }
 
-            .project-card {
-                height: auto;
-                min-height: 80px;
-                flex: 0 0 auto;
-                width: 100%;
-                scroll-snap-align: start;
-            }
-
-            .project-card[active] {
-                min-height: 300px;
-                transform: none;
-                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            }
-
-            .project-card__content {
-                flex-direction: row;
-                justify-content: flex-start;
-                padding: 1rem;
-                align-items: center;
-                gap: 1rem;
-            }
-
-            .project-card__title {
-                writing-mode: horizontal-tb;
-                transform: none;
-                font-size: 1.2rem;
-                margin-right: auto;
-            }
-
-            .project-card__thumb,
-            .project-card__desc,
-            .project-card__btn {
-                display: none;
-            }
-
-            .project-card[active] .project-card__content {
-                align-items: flex-start;
-                padding: 1.5rem;
-            }
-
-            .project-card[active] .project-card__title {
-                font-size: 1.8rem;
-                margin-bottom: 1rem;
-                margin-top: 2rem;
-            }
-
-            .project-card[active] .project-card__thumb {
-                width: 200px;
-                height: 267px;
-                border-radius: 0.35rem;
-                margin-bottom: 1rem;
-            }
-
-            .project-card[active] .project-card__desc {
-                font-size: 0.95rem;
-                max-width: 100%;
-                margin-bottom: 1rem;
-            }
-
-            .project-card[active] .project-card__btn {
-                align-self: center;
-                width: 100%;
-                text-align: center;
-                padding: 0.7rem;
-            }
-
-            .dots {
-                display: none;
-            }
-
-            .controls {
-                width: 100%;
-                justify-content: space-between;
-                padding: 0 15px 20px;
-            }
-
-            .nav-btn {
-                position: static;
-                transform: none;
-            }
+        /* 푸터 */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+            color: #ff6b6b;
+            font-weight: 700;
+            background: #fff8e1;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Full Stack Developer | Web Developer</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about">소개</a></li>
-            <li><a href="#skills">기술 스택</a></li>
-            <li><a href="#projects">프로젝트</a></li>
-            <li><a href="#contact">연락처</a></li>
-        </ul>
-    </nav>
-
     <div class="container">
         <!-- 소개 섹션 -->
-        <section id="about">
-            <h2>소개</h2>
-            <div class="intro-content">
-                <div class="profile-image">
-                    <img src="images/dogdog.webp" alt="프로필 사진" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-                </div>
-                <div class="intro-text">
-                    <h3>안녕하세요, [이름]입니다.</h3>
-                    <p>
-                        사용자 경험을 최우선으로 생각하며 깔끔하고 효율적인 코드를 작성하는 개발자입니다. 
-                        새로운 기술을 배우는 것을 즐기며, 문제 해결 과정에서 창의적인 접근을 추구합니다.
-                        팀과의 협업을 통해 더 나은 결과물을 만들어내는 것에 큰 보람을 느낍니다.
-                    </p>
-                </div>
+        <section class="intro">
+            <h1>Wedding Invitation</h1>
+            <div class="date">
+                2025년 6월 14일 토요일 오후 2시
+            </div>
+            <div class="names">
+                신랑 김○○<br>
+                신부 이○○
+            </div>
+            <div class="message">
+                저희 두 사람이<br>
+                사랑과 믿음으로 하나가 되어<br>
+                인생의 새로운 출발을 하려 합니다.<br><br>
+                오셔서 축복해 주시면<br>
+                더없는 기쁨으로 간직하겠습니다.
             </div>
         </section>
 
-        <!-- 기술 스택 섹션 -->
-        <section id="skills">
-            <h2>기술 스택</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Vue.js</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Django</span>
-                        <span class="skill-tag">Express</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Database</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">MongoDB</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Others</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">Figma</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- 프로젝트 섹션 - 슬라이더 -->
-    <section id="projects">
-        <h2>프로젝트</h2>
-        <div class="project-head">
-            <h3>주요 프로젝트를 확인해보세요</h3>
-            <div class="controls">
-                <button id="prev" class="nav-btn" aria-label="Prev">‹</button>
-                <button id="next" class="nav-btn" aria-label="Next">›</button>
-            </div>
+        <!-- 메인 이미지 -->
+        <div class="main-image">
+            <!-- 여기에 이미지를 넣으세요: <img src="메인이미지.jpg" alt="Wedding"> -->
+            메인 이미지 영역
         </div>
 
-        <div class="slider">
-            <div class="track" id="track">
-
-                <article class="project-card" active>
-                    <img class="project-card__bg" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="">
-                    <div class="project-card__content">
-                        <img class="project-card__thumb" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400" alt="">
-                        <div>
-                            <h3 class="project-card__title">프로젝트 1</h3>
-                            <p class="project-card__desc">React와 Node.js를 활용한 실시간 협업 플랫폼입니다. WebSocket을 통한 실시간 통신을 구현했습니다.</p>
-                            <button class="project-card__btn">자세히 보기</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <img class="project-card__bg" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" alt="">
-                    <div class="project-card__content">
-                        <img class="project-card__thumb" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400" alt="">
-                        <div>
-                            <h3 class="project-card__title">프로젝트 2</h3>
-                            <p class="project-card__desc">Vue.js 기반 데이터 시각화 대시보드입니다. Chart.js를 활용하여 인터랙티브한 차트를 구현했습니다.</p>
-                            <button class="project-card__btn">자세히 보기</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <img class="project-card__bg" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800" alt="">
-                    <div class="project-card__content">
-                        <img class="project-card__thumb" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400" alt="">
-                        <div>
-                            <h3 class="project-card__title">프로젝트 3</h3>
-                            <p class="project-card__desc">Python Django를 활용한 전자상거래 플랫폼입니다. 결제 시스템과 재고 관리 기능을 구현했습니다.</p>
-                            <button class="project-card__btn">자세히 보기</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <img class="project-card__bg" src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800" alt="">
-                    <div class="project-card__content">
-                        <img class="project-card__thumb" src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=400" alt="">
-                        <div>
-                            <h3 class="project-card__title">프로젝트 4</h3>
-                            <p class="project-card__desc">모바일 우선 반응형 웹 애플리케이션입니다. Progressive Web App 기술을 적용했습니다.</p>
-                            <button class="project-card__btn">자세히 보기</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <img class="project-card__bg" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800" alt="">
-                    <div class="project-card__content">
-                        <img class="project-card__thumb" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400" alt="">
-                        <div>
-                            <h3 class="project-card__title">프로젝트 5</h3>
-                            <p class="project-card__desc">AI 기반 추천 시스템을 탑재한 콘텐츠 플랫폼입니다. 머신러닝 알고리즘을 활용했습니다.</p>
-                            <button class="project-card__btn">자세히 보기</button>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-
-        <div class="dots" id="dots"></div>
-    </section>
-
-    <div class="container">
-        <!-- 연락처 섹션 -->
-        <section id="contact">
-            <h2>연락처</h2>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <div class="contact-info">
-                        <h3>Email</h3>
-                        <a href="mailto:your.email@example.com">your.email@example.com</a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">💼</div>
-                    <div class="contact-info">
-                        <h3>GitHub</h3>
-                        <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">🔗</div>
-                    <div class="contact-info">
-                        <h3>LinkedIn</h3>
-                        <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📱</div>
-                    <div class="contact-info">
-                        <h3>Phone</h3>
-                        <a href="tel:+821012345678">010-1234-5678</a>
-                    </div>
-                </div>
+        <!-- 소개 영상 섹션 -->
+        <section class="video-section">
+            <h2>Our Story</h2>
+            <div class="video-container">
+                <!-- 여기에 영상을 넣으세요: <video controls><source src="영상.mp4" type="video/mp4"></video> -->
+                소개 영상 영역
             </div>
         </section>
+
+        <!-- 오시는 길 섹션 -->
+        <section class="location">
+            <h2>오시는 길</h2>
+            <div class="venue-info">
+                <div class="venue-name">○○웨딩홀</div>
+                <div class="venue-address">
+                    서울시 ○○구 ○○동 123-45<br>
+                    ○○빌딩 5층<br>
+                    Tel. 02-1234-5678
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <!-- 여기에 지도 API를 넣으세요 (카카오맵, 네이버지도 등) -->
+                지도 영역
+            </div>
+
+            <div class="map-buttons">
+                <button class="map-btn" onclick="openKakaoMap()">카카오맵</button>
+                <button class="map-btn" onclick="openNaverMap()">네이버지도</button>
+                <button class="map-btn" onclick="openTmap()">티맵</button>
+            </div>
+
+            <div style="margin-top: 30px; font-size: 14px; color: #666; line-height: 1.8;">
+                <strong>지하철</strong><br>
+                2호선 ○○역 3번 출구 도보 5분<br><br>
+                <strong>버스</strong><br>
+                간선: 123, 456, 789<br>
+                지선: 1234, 5678<br><br>
+                <strong>주차</strong><br>
+                건물 내 주차장 이용 가능 (2시간 무료)
+            </div>
+        </section>
+
+        <!-- 사진 갤러리 섹션 - 카드 슬라이더 -->
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <div class="slider">
+                <img class="item" src="https://assets.codepen.io/16327/portrait-number-5.png" alt="사진 5" />
+                <img class="item" src="https://assets.codepen.io/16327/portrait-number-4.png" alt="사진 4" />
+                <img class="item" src="https://assets.codepen.io/16327/portrait-number-3.png" alt="사진 3" />
+                <img class="item" src="https://assets.codepen.io/16327/portrait-number-2.png" alt="사진 2" />
+                <img class="item" src="https://assets.codepen.io/16327/portrait-number-1.png" alt="사진 1" />
+            </div>
+            <div class="gallery-notice">
+                사진을 클릭하면 다음 사진을 볼 수 있습니다 📸
+            </div>
+        </section>
+
+        <!-- 축의금 안내 섹션 -->
+        <section class="account">
+            <h2>마음 전하실 곳</h2>
+            
+            <div class="account-info">
+                <div class="account-title">신랑측 계좌</div>
+                <div class="account-detail">
+                    신한은행 110-123-456789<br>
+                    예금주: 김○○
+                </div>
+                <button class="copy-btn" onclick="copyAccount('110123456789')">계좌번호 복사</button>
+            </div>
+
+            <div class="account-info">
+                <div class="account-title">신부측 계좌</div>
+                <div class="account-detail">
+                    국민은행 123-456-789012<br>
+                    예금주: 이○○
+                </div>
+                <button class="copy-btn" onclick="copyAccount('123456789012')">계좌번호 복사</button>
+            </div>
+        </section>
+
+        <!-- 식사 안내 섹션 -->
+        <section class="meal">
+            <h2>식사 안내</h2>
+            <div class="meal-info">
+                예식 후 뷔페식으로 식사가 제공됩니다.<br>
+                5층 연회장에서 진행됩니다.
+            </div>
+            <div class="meal-notice">
+                참석 여부를 미리 알려주시면<br>
+                준비에 큰 도움이 됩니다.
+            </div>
+        </section>
+
+        <!-- 푸터 -->
+        <footer>
+            <p>김○○ · 이○○의 결혼식</p>
+            <p style="margin-top: 10px;">2025. 06. 14</p>
+        </footer>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
     <script>
-        (() => {
-            const track = document.getElementById("track");
-            const wrap = track.parentElement;
-            const cards = Array.from(track.children);
-            const prev = document.getElementById("prev");
-            const next = document.getElementById("next");
-            const dotsBox = document.getElementById("dots");
-            const isMobile = () => matchMedia("(max-width:768px)").matches;
-            
-            cards.forEach((_, i) => {
-                const dot = document.createElement("span");
-                dot.className = "dot";
-                dot.onclick = () => activate(i, true);
-                dotsBox.appendChild(dot);
+        // 계좌번호 복사 함수
+        function copyAccount(accountNumber) {
+            const textarea = document.createElement('textarea');
+            textarea.value = accountNumber;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('계좌번호가 복사되었습니다.');
+        }
+
+        // 지도 앱 열기 함수들
+        function openKakaoMap() {
+            window.open('https://map.kakao.com/link/search/웨딩홀명', '_blank');
+        }
+
+        function openNaverMap() {
+            window.open('https://map.naver.com/v5/search/웨딩홀명', '_blank');
+        }
+
+        function openTmap() {
+            window.open('https://tmap.life/d76dadc5', '_blank');
+        }
+
+        // 카드 슬라이더 기능
+        const slider = document.querySelector(".slider");
+
+        function moveCard() {
+            const lastItem = slider.querySelector(".item:last-child");
+            if (slider && lastItem) {
+                lastItem.style.display = "none";
+                const newItem = document.createElement("img");
+                newItem.className = lastItem.className;
+                newItem.src = lastItem.src;
+                newItem.alt = lastItem.alt;
+                slider.insertBefore(newItem, slider.firstChild);
+            }
+        }
+
+        slider.addEventListener("click", (e) => {
+            let state = Flip.getState(".item");
+            moveCard();
+            Flip.from(state, {
+                targets: ".item",
+                ease: "sine.inOut",
+                absolute: true,
+                onEnter: (elements) => {
+                    return gsap.from(elements, {
+                        duration: 0.3,
+                        yPercent: 20,
+                        opacity: 0,
+                        ease: "expo.out"
+                    });
+                },
+                onLeave: (element) => {
+                    return gsap.to(element, {
+                        duration: 0.3,
+                        yPercent: 5,
+                        xPercent: -5,
+                        transformOrigin: "bottom left",
+                        opacity: 0,
+                        ease: "expo.out",
+                        onComplete() {
+                            slider.removeChild(element[0]);
+                        }
+                    });
+                }
             });
-            
-            const dots = Array.from(dotsBox.children);
-            let current = 0;
-            
-            function center(i) {
-                const card = cards[i];
-                const axis = isMobile() ? "top" : "left";
-                const size = isMobile() ? "clientHeight" : "clientWidth";
-                const start = isMobile() ? card.offsetTop : card.offsetLeft;
-                wrap.scrollTo({
-                    [axis]: start - (wrap[size] / 2 - card[size] / 2),
-                    behavior: "smooth"
-                });
-            }
-            
-            function toggleUI(i) {
-                cards.forEach((c, k) => c.toggleAttribute("active", k === i));
-                dots.forEach((d, k) => d.classList.toggle("active", k === i));
-                prev.disabled = i === 0;
-                next.disabled = i === cards.length - 1;
-            }
-            
-            function activate(i, scroll) {
-                if (i === current) return;
-                current = i;
-                toggleUI(i);
-                if (scroll) center(i);
-            }
-            
-            function go(step) {
-                activate(Math.min(Math.max(current + step, 0), cards.length - 1), true);
-            }
-            
-            prev.onclick = () => go(-1);
-            next.onclick = () => go(1);
-            
-            addEventListener("keydown", (e) => {
-                if (["ArrowRight", "ArrowDown"].includes(e.key)) go(1);
-                if (["ArrowLeft", "ArrowUp"].includes(e.key)) go(-1);
-            }, { passive: true });
-            
-            cards.forEach((card, i) => {
-                card.addEventListener("mouseenter", () => 
-                    matchMedia("(hover:hover)").matches && activate(i, true)
-                );
-                card.addEventListener("click", () => activate(i, true));
-            });
-            
-            let sx = 0, sy = 0;
-            track.addEventListener("touchstart", (e) => {
-                sx = e.touches[0].clientX;
-                sy = e.touches[0].clientY;
-            }, { passive: true });
-            
-            track.addEventListener("touchend", (e) => {
-                const dx = e.changedTouches[0].clientX - sx;
-                const dy = e.changedTouches[0].clientY - sy;
-                if (isMobile() ? Math.abs(dy) > 60 : Math.abs(dx) > 60)
-                    go((isMobile() ? dy : dx) > 0 ? -1 : 1);
-            }, { passive: true });
-            
-            if (window.matchMedia("(max-width:768px)").matches) dotsBox.hidden = true;
-            addEventListener("resize", () => center(current));
-            toggleUI(0);
-            center(0);
-        })();
+        });
     </script>
 </body>
 </html>
